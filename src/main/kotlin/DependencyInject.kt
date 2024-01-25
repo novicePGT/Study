@@ -16,15 +16,14 @@ class RoutePlanner {
     private val USE_ONLINE_MAP = true
     private val INCLUDE_SEASONAL_ROADS = false
 
-    private lateinit var roadMap: RoadMap
+    private var roadMap: RoadMap
 
-    init {
+    constructor() {
         this.roadMap = NorthAmericaRoadMap(USE_ONLINE_MAP, INCLUDE_SEASONAL_ROADS)
     }
 }
 
 abstract class RoadMap
 
-class NorthAmericaRoadMap(useMap: Boolean, useSeasonRoad: Boolean) : RoadMap() {
-}
+class NorthAmericaRoadMap(useMap: Boolean, useSeasonRoad: Boolean) : RoadMap()
 
